@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.marketplace.controller.ProductControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-04-11T12:56:19.117Z" hostname="MacBook-Air-Egor-2.local" time="0.045">
+  <properties/>
+  <testcase name="testCreateProduct_Success()" classname="com.example.marketplace.controller.ProductControllerTest" time="0.026"/>
+  <testcase name="updateProduct_Success()" classname="com.example.marketplace.controller.ProductControllerTest" time="0.003"/>
+  <testcase name="testCreateProduct_ValidationFailed()" classname="com.example.marketplace.controller.ProductControllerTest" time="0.005"/>
+  <testcase name="updateProduct_NotFound()" classname="com.example.marketplace.controller.ProductControllerTest" time="0.002"/>
+  <testcase name="testGetProducts()" classname="com.example.marketplace.controller.ProductControllerTest" time="0.004"/>
+  <testcase name="deleteProduct_Success()" classname="com.example.marketplace.controller.ProductControllerTest" time="0.002"/>
+  <system-out><![CDATA[2025-04-11T15:56:18.983+03:00  INFO 16681 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.marketplace.controller.ProductControllerTest]: ProductControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-04-11T15:56:18.987+03:00  INFO 16681 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.marketplace.MarketplaceApplication for test class com.example.marketplace.controller.ProductControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-04-11T15:56:18.999+03:00  INFO 16681 --- [    Test worker] c.e.m.controller.ProductControllerTest   : Starting ProductControllerTest using Java 21.0.4 with PID 16681 (started by egor in /Users/egor/Desktop/proj9/e.drobyazko)
+2025-04-11T15:56:18.999+03:00  INFO 16681 --- [    Test worker] c.e.m.controller.ProductControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2025-04-11T15:56:19.112+03:00  INFO 16681 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2025-04-11T15:56:19.112+03:00  INFO 16681 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2025-04-11T15:56:19.112+03:00  INFO 16681 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2025-04-11T15:56:19.115+03:00  INFO 16681 --- [    Test worker] c.e.m.controller.ProductControllerTest   : Started ProductControllerTest in 0.126 seconds (process running for 1.68)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
