@@ -24,7 +24,6 @@ public class User {
     @Column(length = 50)
     private String phone;
 
-    // Геттеры
     public Long getId() {
         return id;
     }
@@ -49,7 +48,6 @@ public class User {
         return phone;
     }
 
-    // Сеттеры
     public void setId(Long id) {
         this.id = id;
     }

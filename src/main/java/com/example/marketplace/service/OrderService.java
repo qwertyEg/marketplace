@@ -28,16 +28,13 @@ public class OrderService {
 
     @Transactional
     public OrderResponse createOrder(OrderRequest request) {
-        // Получение пользователя
         User user = userRepository.findById(request.userId())
                 .orElseThrow(() -> new UserNotFoundException("User not found"));
 
-        // Создание заказа
         Order order = new Order();
         order.setUser(user);
         order.setStatus(Order.Status.NEW);
 
-        // Добавление товаров
         for (OrderItemRequest item : request.items()) {
             Product product = productRepository.findById(item.productId())
                     .orElseThrow(() -> new ProductNotFoundException("Product not found"));
@@ -55,7 +52,6 @@ public class OrderService {
             order.getItems().add(orderItem);
         }
 
-        // Сохранение заказа
         Order savedOrder = orderRepository.save(order);
         return convertToResponse(savedOrder);
     }
@@ -71,7 +67,6 @@ public class OrderService {
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new OrderNotFoundException("Order not found"));
 
-        // Проверка статуса
         if (order.getStatus() == Order.Status.COMPLETED) {
             throw new IllegalStateException("Cannot update status of a completed order");
         }
@@ -86,7 +81,6 @@ public class OrderService {
         }
     }
 
-    // Преобразование сущности в DTO
     private OrderResponse convertToResponse(Order order) {
         return new OrderResponse(
                 order.getId(),

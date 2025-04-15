@@ -24,7 +24,7 @@ public class UserService {
         User user = new User();
         user.setName(request.name());
         user.setEmail(request.email());
-        user.setPassword(request.password()); // В реальном проекте используйте шифрование
+        user.setPassword(request.password());
         return userRepository.save(user);
     }
 

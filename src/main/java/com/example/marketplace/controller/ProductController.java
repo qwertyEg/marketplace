@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
@@ -69,6 +68,16 @@ public class ProductController {
     @ApiResponse(responseCode = "404", description = "Product not found")
     @PostMapping("/{id}/rate")
     public ResponseEntity<ProductResponse> rateProduct(
+            @PathVariable Long id,
+            @RequestBody @Valid RatingRequest request,
+            @RequestHeader("X-User-Id") Long userId) {
+
+        Product product = productService.rateProduct(id, userId, request.rating());
+        return ResponseEntity.ok(convertToResponse(product));
+    }
+
+    @PutMapping("/{id}/rate")
+    public ResponseEntity<ProductResponse> updateProductRating(
             @PathVariable Long id,
             @RequestBody @Valid RatingRequest request,
             @RequestHeader("X-User-Id") Long userId) {

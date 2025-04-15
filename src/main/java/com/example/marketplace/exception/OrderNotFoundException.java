@@ -1,3 +1,4 @@
+
 package com.example.marketplace.exception;
 
 public class OrderNotFoundException extends RuntimeException {
@@ -5,5 +6,3 @@ public class OrderNotFoundException extends RuntimeException {
     super(message);
   }
 }
-
-
